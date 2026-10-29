@@ -1,7 +1,6 @@
 """
 Denna fil hämtar info för tvserier, den använder IDn för tv-serier som samlats in av fetch_ids.
 
-details_progress.txt (skapas om den inte existerar) för att hålla koll på vilka IDn som redan har inhämtats.
 """
 
 import csv
@@ -14,7 +13,7 @@ from api_client import error_handling, rate_limit
 
 logger = logging.getLogger(__name__)
 
-base_url = "https://api.themoviedb.org/3/tv/"
+base_url = "https://api.themoviedb.org/3/tv"
 
 
 def append_json_line(data: dict[str, Any], filename: str) -> None:
