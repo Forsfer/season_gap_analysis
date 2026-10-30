@@ -6,7 +6,7 @@ Denna fil hämtar info för tvserier, den använder IDn för tv-serier som samla
 import csv
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 # Hanterar kontakt med API
@@ -50,7 +50,7 @@ def main():
 
         if response is not None:
             details = response.json()
-            details["fetched_at"] = datetime.now(timezone.utc).isoformat()  # när datan hämtades
+            details["fetched_at"] = datetime.now(UTC).isoformat()  # när datan hämtades
             append_json_line(details, filename="data/raw/show_details.jsonl")
 
             logger.info("Detaljer för %s sparade", series_id)
