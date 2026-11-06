@@ -17,7 +17,7 @@ total_pages = None # Endpointen returnerar sidor, så vi använder värdet från
 
 base_url = "https://api.themoviedb.org/3/discover/tv"
 params = {
-    'air_date.gte': '1998-01-01', # Vi vill ha alla säsonger under 2000-talet, och om säsong 2 kom i januari 2000 så behöver vi säsong 1 som kom innan 2000-talet för att räkna ut antal dagar väntetid
+    'air_date.gte': '2000-01-01', # Alla serier med aktivitet under 2000-talet.
     'include_adult': 'false',
     'include_null_first_air_dates': 'false',
     'language': 'en-US',
